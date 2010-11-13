@@ -6,4 +6,4 @@ Use this with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 Here's what it looks like
 
-![a screenshot](https://github.com/cookrn/zsh_theme/raw/master/screenshot.png)
+![a screenshot](http://image.bayimg.com/daaflaadi.jpg)
