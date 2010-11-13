@@ -9,7 +9,7 @@ function prompt_char {
 	if [ "$(whoami)" = "root" ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo "%{$fg_bold[blue]%}»%{$reset_color%}"; fi
 }
 
-PROMPT='%{$fg_bold[green]%}%~%{$reset_color%} $(prompt_char) '
+PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(prompt_char) '
 
 RPROMPT='%{$fg_bold[blue]%}[%{$reset_color%}%{$fg[green]%}%n%{$reset_color%}%{$fg_bold[blue]%}]%{$reset_color%}$(git_prompt_info)'
 
