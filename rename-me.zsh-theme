@@ -11,5 +11,5 @@ function prompt_char {
 
 PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(prompt_char) '
 
-RPROMPT='%{$fg_bold[blue]%}[%{$reset_color%}%{$fg[green]%}%n%{$reset_color%}%{$fg_bold[blue]%}]%{$reset_color%}$(git_prompt_info)'
+RPROMPT='%{$reset_color%}$(git_prompt_info)'
 
