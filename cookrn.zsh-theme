@@ -14,13 +14,13 @@ function rvm_prompt_info() {
   echo "($ruby_version)"
 }
 
-function rvm_info_for_prompt {
-  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
+function ruby_info {
+  ruby_version=$(ruby -v)
+  ruby_version=$ruby_version[(w)1,(w)2]
   echo "$ZSH_THEME_GIT_PROMPT_PREFIX$ruby_version$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
-
 PROMPT='%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%} $(prompt_char) '
 
-RPROMPT='%{$reset_color%}$(rvm_info_for_prompt)$(git_prompt_info)'
+RPROMPT='%{$reset_color%}$(ruby_info)$(git_prompt_info)'
 
